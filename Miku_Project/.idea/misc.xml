@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/bg_list_spn.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_favarite.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_list.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_list_spn.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_play.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_product_list.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_radius.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_welcome.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/border_shadow.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/custom_thump.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_delete.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_fast_forwar_24.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_info.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_list_favo.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_music.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_mx.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/ic_play2.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/seekbar_progress.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/seekbar_style.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_bottom_nav.xml" value="0.264" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_forgot_password_screen.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_insert_favorite.xml" value="0.23143115942028986" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_log_in_screen.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_main.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_play_song_screen.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_playlist_screen.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_product_list_screen.xml" value="0.2" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_start_screen.xml" value="0.23596014492753623" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/activity_update_favorite.xml" value="0.23143115942028986" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_favorite.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_home.xml" value="0.1540130151843818" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_info.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_into.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_playlist.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_profile.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_search.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_song_disc.xml" value="0.19429347826086957" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/fragment_song_list.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/layout_onboarding.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/loading_layout.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/media_notification_layout.xml" value="0.182518115942029" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/play_song_item.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_album_item.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_cate_item.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_category_item.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_favorite_item.xml" value="0.264" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_playlist_item.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_product_item.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_recommend_item.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_search_product_item.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_theme_item.xml" value="0.2056159420289855" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/spn_category.xml" value="0.23143115942028986" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/menu/popup_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable/bg_welcome.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable/indicator_selector.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable/indicator_selector2.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable/sectionline.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/drawable/tablayout.xml" value="0.2703125" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_forgot_password_screen.xml" value="0.2164855072463768" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_log_in_screen.xml" value="0.264" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.2164855072463768" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/activity_start_screen.xml" value="0.264" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/layout_onboarding.xml" value="0.22644927536231885" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/layout_onboarding1.xml" value="0.22644927536231885" />
+        <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/rcv_recommend_item.xml" value="0.2164855072463768" />
+        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/activity_main.xml" value="0.24864130434782608" />
+        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/layout_onboarding.xml" value="0.24864130434782608" />
+        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/loading_layout.xml" value="0.24864130434782608" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

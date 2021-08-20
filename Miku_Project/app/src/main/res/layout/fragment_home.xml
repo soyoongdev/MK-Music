@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_recommend_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="380dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:alpha="0.5"
+                    android:background="@drawable/bg_welcome" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Recommended"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/rl_recommend_title"
+                android:layout_marginLeft="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_music_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rcv_recommend"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="380dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:alpha="0.5"
+                    android:background="@drawable/bg_welcome" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Music Style"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_category"
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_music_style"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rcv_category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="380dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:alpha="0.5"
+                    android:background="@drawable/bg_welcome" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Album"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_album"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

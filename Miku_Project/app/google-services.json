@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585076434436",
+    "project_id": "miku-project-6e028",
+    "storage_bucket": "miku-project-6e028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585076434436:android:8d88c8c1fc8701997f3751",
+        "android_client_info": {
+          "package_name": "com.example.miku_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585076434436-hkaqr7ipt4ehpuinh6tq2iu0hc5iek19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7PoPg1bac5JYkoF7SXgYrim1wEd7FBhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585076434436-hkaqr7ipt4ehpuinh6tq2iu0hc5iek19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

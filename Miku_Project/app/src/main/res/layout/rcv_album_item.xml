@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="158dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_album_image_item"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/album005"
+        app:civ_border_width="0dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_album_singer_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_album_image_item"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Deep Focus"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

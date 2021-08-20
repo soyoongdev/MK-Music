@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.main_screens.Playlist_Screen"
+    android:background="@drawable/bg_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+            <RelativeLayout
+                android:id="@+id/rl_banner_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_playlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_welcome" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_background_playlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/bg_gorillaz" />
+
+                    <TextView
+                        android:id="@+id/tv_playlist_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textSize="30sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Gorrillaz"
+                        android:fontFamily="@font/redhattext_regular"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/tv_indie_classic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:textSize="18sp"
+                        android:layout_margin="10dp"
+                        android:text="Subcribe"
+                        android:fontFamily="@font/redhattext_regular"
+                        android:textColor="#fff"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_notifications_24"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginRight="100dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_banner_playlist"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/bg_welcome" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/redhattext_regular"
+                    android:text="Mix"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_mx"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_play_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_banner_playlist"
+                android:layout_toRightOf="@id/rl_mix"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/bg_play" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/redhattext_regular"
+                    android:text="Play"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/ic_play" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Songs"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#fff"
+                android:layout_below="@id/rl_mix"/>
+
+            <TextView
+                android:id="@+id/tv_more_songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rl_mix"/>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_songs">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_playlistsong"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_albums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Albums"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#fff"
+                android:layout_below="@id/scroll"/>
+
+            <TextView
+                android:id="@+id/tv_more_albums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/scroll"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_albums"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_albums" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
