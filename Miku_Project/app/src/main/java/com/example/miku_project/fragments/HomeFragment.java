@@ -1,5 +1,6 @@
 package com.example.miku_project.fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,12 +24,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.miku_project.MainActivity;
 import com.example.miku_project.R;
 import com.example.miku_project.adapters.Adapter_Album;
 import com.example.miku_project.adapters.Adapter_Category;
 import com.example.miku_project.adapters.Adapter_Playlist;
 import com.example.miku_project.adapters.Adapter_Product;
+import com.example.miku_project.adapters.Adapter_Product2;
 import com.example.miku_project.adapters.Adapter_Recommend;
+import com.example.miku_project.adapters.Adapter_Songs;
 import com.example.miku_project.adapters.Adapter_Theme;
 import com.example.miku_project.models.Album;
 import com.example.miku_project.models.Category;
@@ -49,9 +54,11 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     private Adapter_Product adapter_product;
+    private Adapter_Product2 adapter_product2;
     private Adapter_Album adapter_album;
     private Adapter_Category adapter_category;
     private Adapter_Theme adapter_theme;
+    private Adapter_Songs adapter_songs;
     private Adapter_Recommend adapter_recommend;
     private RecyclerView rcv_recommend, rcv_category, rcv_album;
 
@@ -68,10 +75,13 @@ public class HomeFragment extends Fragment {
 //    private static String BASE_URL = "http://10.0.2.2:8081/";
     private static String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
 
+    private SharedPreferences sharePref;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
+
         return view;
     }
 
@@ -79,61 +89,49 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        sharePref = androidx.preference.PreferenceManager.getDefaultSharedPreferences(getActivity());
+
         rcv_recommend = view.findViewById(R.id.rcv_recommend);
         rcv_album = view.findViewById(R.id.rcv_album);
         rcv_category = view.findViewById(R.id.rcv_category);
 
-//        horizontalScrollView = view.findViewById(R.id.hrz_theme_category);
-
         rcvRecommend();
         rcvAlbum();
         rcvTheme();
-//        getThemeCategory();
     }
 
     private void rcvTheme() {
         rcv_category.setHasFixedSize(true);
-        rcv_category.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        rcv_category.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
         service.getAllTheme().enqueue(getAllTheme);
     }
 
     private void rcvRecommend() {
         rcv_recommend.setHasFixedSize(true);
-        rcv_recommend.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rcv_recommend.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
-//        service.getAllProduct().enqueue(getAllCB);
-        service.getAllRecommends().enqueue(getAllRecommendCB);
+        service.getAllProduct().enqueue(getAllCB);
+//        service.getAllRecommends().enqueue(getAllRecommendCB);
 
     }
 
     private void rcvAlbum() {
         rcv_album.setHasFixedSize(true);
-        rcv_album.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rcv_album.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
         service.getAllAlbum().enqueue(getAllAlbumCB);
 
     }
-
-    private void getThemeCategory(){
-        service.getThemeCategory().enqueue(getAllThemeCategory);
-    }
-
-//    private void rcvCategory() {
-//        rcv_category.setHasFixedSize(true);
-//        rcv_category.setLayoutManager(new GridLayoutManager(getContext(), 2));
-//
-//        service.getAllCategories().enqueue(getAllCategoryCB);
-//    }
-
 
     Callback<ArrayList<Product>> getAllCB = new Callback<ArrayList<Product>>() {
         @Override
         public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
             if (response.isSuccessful()){
                 product_data = response.body();
-                adapter_product = new Adapter_Product(getContext(), product_data);
-                rcv_recommend.setAdapter(adapter_product);
+//                adapter_product = new Adapter_Product(getActivity(), product_data);
+                adapter_product2 = new Adapter_Product2(getActivity(), product_data);
+                rcv_recommend.setAdapter(adapter_product2);
             }else {
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
             }
@@ -141,7 +139,6 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onFailure(Call<ArrayList<Product>> call, Throwable t) {
-
         }
     };
 
@@ -150,7 +147,7 @@ public class HomeFragment extends Fragment {
         public void onResponse(Call<ArrayList<Theme>> call, Response<ArrayList<Theme>> response) {
             if (response.isSuccessful()){
                 theme_data = response.body();
-                adapter_theme = new Adapter_Theme(getContext(), theme_data);
+                adapter_theme = new Adapter_Theme(getActivity(), theme_data);
                 rcv_category.setAdapter(adapter_theme);
             }else {
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
@@ -163,12 +160,30 @@ public class HomeFragment extends Fragment {
         }
     };
 
+//    Callback<ArrayList<Product>> getAllRecommend = new Callback<ArrayList<Product>>() {
+//        @Override
+//        public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
+//            if (response.isSuccessful()){
+//                product_data = response.body();
+//                adapter_songs = new Adapter_Songs(getActivity(), product_data);
+//                rcv_recommend.setAdapter(adapter_theme);
+//            }else {
+//                Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//
+//        @Override
+//        public void onFailure(Call<ArrayList<Product>> call, Throwable t) {
+//
+//        }
+//    };
+
     Callback<ArrayList<Recommend>> getAllRecommendCB = new Callback<ArrayList<Recommend>>() {
         @Override
         public void onResponse(Call<ArrayList<Recommend>> call, Response<ArrayList<Recommend>> response) {
             if (response.isSuccessful()){
                 recommend_data = response.body();
-                adapter_recommend = new Adapter_Recommend(getContext(), recommend_data);
+                adapter_recommend = new Adapter_Recommend(getActivity(), recommend_data);
                 rcv_recommend.setAdapter(adapter_recommend);
             }else {
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
@@ -186,7 +201,7 @@ public class HomeFragment extends Fragment {
         public void onResponse(Call<ArrayList<Album>> call, Response<ArrayList<Album>> response) {
             if (response.isSuccessful()){
                 album_data = response.body();
-                adapter_album = new Adapter_Album(getContext(), album_data);
+                adapter_album = new Adapter_Album(getActivity(), album_data);
                 rcv_album.setAdapter(adapter_album);
             }else {
                 Log.e(">>>>>Error: ", String.valueOf(album_data));
@@ -261,24 +276,6 @@ public class HomeFragment extends Fragment {
 
         }
     };
-
-//    Callback<ArrayList<ProductCategory>> getAllCategoryCB = new Callback<ArrayList<ProductCategory>>() {
-//        @Override
-//        public void onResponse(Call<ArrayList<ProductCategory>> call, Response<ArrayList<ProductCategory>> response) {
-//            if (response.isSuccessful()){
-//                category_data = response.body();
-//                adapter_category = new Adapter_Category(getContext(), category_data);
-//                rcv_category.setAdapter(adapter_category);
-//            }else {
-//                Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//
-//        @Override
-//        public void onFailure(Call<ArrayList<ProductCategory>> call, Throwable t) {
-//
-//        }
-//    };
 
     @Override
     public void onResume() {

@@ -35,32 +35,16 @@
         app:tabIndicatorColor="#DC0F92">
     </com.google.android.material.tabs.TabLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl_get_started"
+    <Button
+        android:id="@+id/btn_get_started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="24dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="invisible">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Started"
-            android:textColor="#000"
-            android:textSize="16sp"
-            android:fontFamily="@font/roboto_regular"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:alpha="0.5"
-            android:background="@drawable/bg_welcome" />
-    </RelativeLayout>
+        android:text="Get Started"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:id="@+id/rl_skip_btn"

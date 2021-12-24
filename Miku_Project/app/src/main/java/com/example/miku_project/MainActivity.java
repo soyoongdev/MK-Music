@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabIndicator;
     private Button btnNext;
     private int position = 0;
-    private RelativeLayout btnGetStarted;
+    private Button btnGetStarted;
     private Animation btnAnim;
     private RelativeLayout btn_skip;
     private Boolean visible = false;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         btnNext = findViewById(R.id.btn_next);
-        btnGetStarted = findViewById(R.id.rl_get_started);
+        btnGetStarted = findViewById(R.id.btn_get_started);
         tabIndicator = findViewById(R.id.tab_indicator);
         btnAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation);
         btn_skip = findViewById(R.id.rl_skip_btn);

@@ -119,7 +119,7 @@ public class FavoriteFragment extends Fragment {
         public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
             if (response.isSuccessful()){
                 product_data = response.body();
-                adapter_product = new Adapter_Product(getContext(), product_data);
+                adapter_product = new Adapter_Product(getActivity(), product_data);
                 rcv_favorite.setAdapter(adapter_product);
                 eventClick();
             }else {

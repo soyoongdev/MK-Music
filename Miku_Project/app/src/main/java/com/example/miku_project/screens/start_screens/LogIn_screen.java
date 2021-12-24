@@ -72,11 +72,16 @@ public class LogIn_screen extends AppCompatActivity {
             if (response.isSuccessful()){
                 ResponseModel responseModel = response.body();
                 if (responseModel.getStatus()){
+                    dialog.dismiss();
                     startActivity(new Intent(LogIn_screen.this, Bottom_nav.class));
                     finish();
                 }else {
+                    dialog.dismiss();
                     Toast.makeText(LogIn_screen.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
+            }else {
+                dialog.dismiss();
+                Toast.makeText(LogIn_screen.this, "Failed", Toast.LENGTH_SHORT).show();
             }
         }
 

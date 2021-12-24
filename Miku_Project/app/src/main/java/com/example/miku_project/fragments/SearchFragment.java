@@ -85,7 +85,7 @@ public class SearchFragment extends Fragment {
         public void onResponse(Call<ArrayList<Category>> call, Response<ArrayList<Category>> response) {
             if (response.isSuccessful()) {
                 category_data = response.body();
-                adapter_category = new Adapter_Category(getContext(), category_data);
+                adapter_category = new Adapter_Category(getActivity(), category_data);
                 rcv_cate.setAdapter(adapter_category);
                 rcv_cate.setHasFixedSize(true);
                 rcv_cate.setLayoutManager(new GridLayoutManager(getActivity(), 2));

@@ -51,7 +51,7 @@ public class PlaylistFragment extends Fragment {
 
         rcv_playlist = view.findViewById(R.id.rcv_playlist);
         rcv_playlist.setHasFixedSize(true);
-        rcv_playlist.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        rcv_playlist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         service.getAllPlaylist().enqueue(getAllPlaylistCB);
     }
 
@@ -60,7 +60,7 @@ public class PlaylistFragment extends Fragment {
         public void onResponse(Call<ArrayList<Playlist>> call, Response<ArrayList<Playlist>> response) {
             if (response.isSuccessful()) {
                 playlist_data = response.body();
-                adapter_playlist = new Adapter_Playlist(getContext(), playlist_data);
+                adapter_playlist = new Adapter_Playlist(getActivity(), playlist_data);
                 rcv_playlist.setAdapter(adapter_playlist);
             } else {
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();

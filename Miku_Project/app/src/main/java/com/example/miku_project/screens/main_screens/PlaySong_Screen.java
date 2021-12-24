@@ -19,12 +19,14 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.miku_project.R;
 import com.example.miku_project.adapters.ViewPagerPlaylistSong;
 import com.example.miku_project.fragments.SongDiscFragment;
 import com.example.miku_project.fragments.SongPlayListFragment;
 import com.example.miku_project.models.Product;
+import com.example.miku_project.models.Recommend;
 import com.example.miku_project.screens.MediaNotification;
 
 import java.io.IOException;
@@ -55,8 +57,18 @@ public class PlaySong_Screen extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mediaPlayer.stop();
-        productArrayList.clear();
+        if (!productArrayList.isEmpty()){
+            mediaPlayer.stop();
+            productArrayList.clear();
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (productArrayList.isEmpty()){
+            Toast.makeText(PlaySong_Screen.this, "Some thing went wrong", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

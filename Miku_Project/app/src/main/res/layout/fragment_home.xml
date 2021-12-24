@@ -76,7 +76,7 @@
                 android:id="@+id/rcv_category"
                 android:layout_width="410dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rl_music_style"/>
+                android:layout_below="@id/rl_music_style" />
 
             <RelativeLayout
                 android:id="@+id/rl_album"

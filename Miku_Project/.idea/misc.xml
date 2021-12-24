@@ -57,6 +57,7 @@
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_playlist_item.xml" value="0.21105072463768115" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_product_item.xml" value="0.21105072463768115" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_recommend_item.xml" value="0.24048913043478262" />
+        <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_recommend_item2.xml" value="0.24547101449275363" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_search_product_item.xml" value="0.2056159420289855" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/rcv_theme_item.xml" value="0.2056159420289855" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/layout/spn_category.xml" value="0.23143115942028986" />
@@ -76,15 +77,8 @@
         <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/layout_onboarding.xml" value="0.22644927536231885" />
         <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/layout_onboarding1.xml" value="0.22644927536231885" />
         <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/rcv_recommend_item.xml" value="0.2164855072463768" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/activity_insert_favorite.xml" value="0.25" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/activity_log_in_screen.xml" value="0.25" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/activity_play_song_screen.xml" value="0.25" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_category_item.xml" value="0.25" />
-        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_favorite_item.xml" value="0.25" />
-        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/activity_main.xml" value="0.24864130434782608" />
-        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/layout_onboarding.xml" value="0.24864130434782608" />
-        <entry key="..\:/MyProject/Miku_Project/app/src/main/res/layout/loading_layout.xml" value="0.24864130434782608" />
+        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_cate_item.xml" value="0.23641304347826086" />
+        <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_recommend_item2.xml" value="0.23641304347826086" />
       </map>
     </option>
   </component>

@@ -43,7 +43,7 @@ public class Adapter_Favorite extends RecyclerView.Adapter<Adapter_Favorite.MyVi
     ArrayList<Favorite> data;
     private IRetrofitService service;
 
-    private static String BASE_URL = "http://10.0.2.2:8081/";
+    private static String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
 
     public Adapter_Favorite(Context context, ArrayList<Favorite> data){
         this.context = context;
