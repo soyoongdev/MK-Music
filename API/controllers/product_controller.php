@@ -17,9 +17,9 @@ class ProductController
         return $this->product_service->getAllProducts();
     }
 
-    public function getById($id)
+    public function getById($produtc_id)
     {
-        return $this->product_service->getById($id);
+        return $this->product_service->getById($produtc_id);
     }
 
     public function getAllCategories()

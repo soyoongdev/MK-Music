@@ -1,4 +1,4 @@
-<?php 
+<?php
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
@@ -8,11 +8,11 @@ $data = json_decode(file_get_contents("php://input"));
 
 include_once '../controllers/product_controller.php';
 
-$product = (new ProductController())->getById($data->id);
-    if ($product) {
-        http_response_code(200);
-        echo json_encode($product); 
-    } else {
-        http_response_code(401);
-        echo json_encode(array());
-    }
+$product = (new ProductController())->getById($data->produtc_id);
+if ($product) {
+    http_response_code(200);
+    echo json_encode($product);
+} else {
+    http_response_code(401);
+    echo json_encode(array());
+}

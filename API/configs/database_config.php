@@ -4,7 +4,7 @@ class DatabaseConfig
     private $host = "127.0.0.1:3306";
     private $username = "root";
     private $password = "";
-    private $database_name = "miku_project";
+    private $database_name = "miku_project2";
 
     public $connection;
 

@@ -32,6 +32,7 @@ class ProductService
                         "product_singer" => $product_singer,
                         "product_image" => $product_image,
                         "song_url" => $song_url,
+                        "category_id" => $category_id,
                         "favorite" => $favorite,
                     );
                     array_push($products, $product);
@@ -43,28 +44,30 @@ class ProductService
         return null;
     }
 
-    public function getById($id)
+    public function getById($produtc_id)
     {
         try {
-            $query = "SELECT id, product_name, singer, product_image, song, category_id
+            $query = "SELECT produtc_id, product_name, product_singer, product_image, song_url, category_id, favorite
                                  FROM " . $this->mk_products . " where id=:id ";
             $stmt = $this->connection->prepare($query);
-            $stmt->bindParam(":id", $id);
+            $stmt->bindParam(":produtc_id", $produtc_id);
             $stmt->execute();
             if ($stmt->rowCount() > 0) {
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 extract($row);
                 $product = array(
-                    "id" => $id,
+                    "produtc_id" => $produtc_id,
                     "product_name" => $product_name,
-                    "singer" => $singer,
+                    "product_singer" => $product_singer,
                     "product_image" => $product_image,
-                    "song" => $song,
+                    "song_url" => $song_url,
                     "category_id" => $category_id,
+                    "favorite" => $favorite
                 );
                 return $product;
             }
         } catch (Exception $e) {
+            echo json_encode($e->getMessage()) . "\n";
         }
         return null;
     }
@@ -191,7 +194,7 @@ class ProductService
     {
         try {
             $keyname = $_POST['keyname'];
-            $query = "SELECT * FROM mk_products WHERE lower(product_name) LIKE '%&keyname%'";
+            $query = "SELECT * FROM mk_products WHERE lower(product_name) LIKE '%$keyname%'";
             $stmt = $this->connection->prepare($query);
 
             $stmt->execute();
