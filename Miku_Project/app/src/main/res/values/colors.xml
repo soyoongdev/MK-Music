@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Transparent opacity  -->
+<!--    0% = #00-->
+<!--    10% = #16-->
+<!--    20% = #32-->
+<!--    30% = #48-->
+<!--    40% = #64-->
+<!--    50% = #80-->
+<!--    60% = #96-->
+<!--    70% = #112-->
+<!--    80% = #128-->
+<!--    90% = #144-->
+<!--  Ex: use "#8033b5e5" because 80 is 50%.  -->
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,4 +21,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bg_status_color">#00C2B1</color>
+    <color name="placeHolder">#909090</color>
+    <color name="transparent">#00000000</color>
+    <color name="pink">#E30098</color>
 </resources>

@@ -79,6 +79,14 @@
         <entry key="..\:/Android Networking/Miku_Project/app/src/main/res/layout/rcv_recommend_item.xml" value="0.2164855072463768" />
         <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_cate_item.xml" value="0.23641304347826086" />
         <entry key="..\:/MyProject/MK_Music/Miku_Project/app/src/main/res/layout/rcv_recommend_item2.xml" value="0.23641304347826086" />
+        <entry key="app/src/main/res/drawable/bg_btn_login.xml" value="0.204" />
+        <entry key="app/src/main/res/drawable/bg_list.xml" value="0.204" />
+        <entry key="app/src/main/res/drawable/bg_list_spn.xml" value="0.204" />
+        <entry key="app/src/main/res/drawable/bg_play.xml" value="0.204" />
+        <entry key="app/src/main/res/drawable/ic_at.xml" value="0.204" />
+        <entry key="app/src/main/res/layout/activity_log_in_screen.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/layout/play_song_item.xml" value="0.2740740740740741" />
       </map>
     </option>
   </component>
