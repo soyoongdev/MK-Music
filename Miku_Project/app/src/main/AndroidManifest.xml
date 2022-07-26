@@ -29,16 +29,13 @@
             android:name=".screens.main_screens.Bottom_nav"
             android:exported="true" />
         <activity
-            android:name=".screens.start_screens.ForgotPassword_screen"
+            android:name=".screens.activity_screens.ForgotPassword_screen"
             android:exported="true" />
         <activity
-            android:name=".screens.start_screens.SignUp_screen"
+            android:name=".screens.activity_screens.SignUp_screen"
             android:exported="true" />
         <activity
-            android:name=".screens.start_screens.LogIn_screen"
-            android:exported="true" />
-        <activity
-            android:name=".screens.start_screens.Start_screen"
+            android:name=".screens.activity_screens.LogIn_screen"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

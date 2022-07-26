@@ -24,4 +24,9 @@
     <color name="placeHolder">#909090</color>
     <color name="transparent">#00000000</color>
     <color name="pink">#E30098</color>
+    <color name="green">#00897B</color>
+    <color name="pink_light">#DD137F</color>
+    <color name="pink_dark">#51004D</color>
+    <color name="mainColor">#0E0B1F</color>
+    <color name="neutral">#EEEEEE</color>
 </resources>

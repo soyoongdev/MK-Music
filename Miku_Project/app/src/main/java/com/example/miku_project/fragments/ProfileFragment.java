@@ -1,50 +1,62 @@
 package com.example.miku_project.fragments;
 
+import static com.example.miku_project.Network.BASE_URL;
+import static com.example.miku_project.RootData.clearPrefUserFile;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
-import com.example.miku_project.adapters.Adapter_Category;
-import com.example.miku_project.models.Category;
 import com.example.miku_project.models.User;
 import com.example.miku_project.myRetrofit.IRetrofitService;
 import com.example.miku_project.myRetrofit.RetrofitBuilder;
-import com.example.miku_project.screens.main_screens.PlaySong_Screen;
+import com.example.miku_project.screens.activity_screens.LogIn_screen;
 
 import java.util.ArrayList;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class ProfileFragment extends Fragment {
 
     private ArrayList<User> user_data = new ArrayList<>();
-    private ImageView iv_avatar;
-    private TextView tv_name, tv_email;
+    private ImageView imgAvatarUser;
+    private TextView tvPlayListCount, tvFollowerCount, tvFollowingCount;
+    private ImageButton btnLogout;
 
     private IRetrofitService service;
     private int position = 0;
     private String image_url;
 
-    private static String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
+
+        imgAvatarUser = view.findViewById(R.id.img_avatarUser);
+        tvPlayListCount = view.findViewById(R.id.tv_playlistNumber);
+        tvFollowerCount = view.findViewById(R.id.tv_followerNumber);
+        tvFollowingCount = view.findViewById(R.id.tv_followingNumber);
+        btnLogout = view.findViewById(R.id.imgBtn_logout);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LogIn_screen.class));
+                clearPrefUserFile(getActivity());
+
+                getActivity().finish();
+            }
+        });
+
         return view;
     }
 
@@ -63,5 +75,4 @@ public class ProfileFragment extends Fragment {
 //                .load(image_url)
 //                .into(iv_avatar);
 //    }
-
 }

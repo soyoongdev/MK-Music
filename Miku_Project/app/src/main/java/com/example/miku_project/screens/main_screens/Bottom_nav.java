@@ -23,10 +23,11 @@ public class Bottom_nav extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_nav);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
-        android.graphics.drawable.Drawable background = Bottom_nav.this.getResources().getDrawable(R.color.bg_status_color);
-        getWindow().setBackgroundDrawable(background);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//        getWindow().setStatusBarColor(Color.TRANSPARENT);
+//        android.graphics.drawable.Drawable background = Bottom_nav.this.getResources().getDrawable(R.color.bg_status_color);
+//        getWindow().setBackgroundDrawable(background);
 
         bottomNavigation = findViewById(R.id.bottom_nav);
 
@@ -84,6 +85,7 @@ public class Bottom_nav extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.bottom_frame_layout, fragment)
+                .setReorderingAllowed(true)
                 .commit();
     }
 }

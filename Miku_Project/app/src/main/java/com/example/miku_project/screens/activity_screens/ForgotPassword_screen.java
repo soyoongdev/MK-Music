@@ -1,14 +1,15 @@
-package com.example.miku_project.screens.start_screens;
+package com.example.miku_project.screens.activity_screens;
+
+import static com.example.miku_project.Network.BASE_URL;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,6 @@ import com.example.miku_project.models.ResponseModel;
 import com.example.miku_project.models.User;
 import com.example.miku_project.myRetrofit.IRetrofitService;
 import com.example.miku_project.myRetrofit.RetrofitBuilder;
-import com.example.miku_project.screens.main_screens.Bottom_nav;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,14 +25,12 @@ import retrofit2.Callback;
 public class ForgotPassword_screen extends AppCompatActivity {
 
     private EditText edt_email_reset;
-    private RelativeLayout btn_send_email;
+    private ImageButton btn_send_email;
     private TextView tv_countdown;
     private CountDownTimer countDownTimer;
+    private ImageButton imgBtn_backLogin, imgBtn_back;
 
     private IRetrofitService service;
-
-//    private static String BASE_URL = "http://10.0.2.2:8081/";
-    private String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +40,11 @@ public class ForgotPassword_screen extends AppCompatActivity {
 
         service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
 
-        edt_email_reset = (EditText) findViewById(R.id.edt_email_reset_password);
-        btn_send_email = (RelativeLayout) findViewById(R.id.rl_send_emailreset);
-        tv_countdown = (TextView) findViewById(R.id.tv_countdown_timer);
+        edt_email_reset = (EditText) findViewById(R.id.edt_email_reset);
+        btn_send_email = (ImageButton) findViewById(R.id.imgBtn_send);
+        tv_countdown = (TextView) findViewById(R.id.tv_resetEmailMessage);
+        imgBtn_backLogin = (ImageButton) findViewById(R.id.imgBtn_backLogin);
+        imgBtn_back = (ImageButton) findViewById(R.id.imgBtn_backLogin);
 
         btn_send_email.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +56,13 @@ public class ForgotPassword_screen extends AppCompatActivity {
                     startCountdownTimer();
                     service.forgot_password(new User(email)).enqueue(forgotPasswordCallback);
                 }
+            }
+        });
+
+        imgBtn_backLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
