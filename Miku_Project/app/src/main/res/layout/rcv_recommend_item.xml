@@ -17,7 +17,7 @@
             android:layout_width="227dp"
             android:layout_height="128dp"
             android:scaleType="fitXY"
-            android:src="@drawable/gorillaz" />
+            android:src="@drawable/ic_user" />
     </androidx.cardview.widget.CardView>
 
     <TextView

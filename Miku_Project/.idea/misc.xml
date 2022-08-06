@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.11927083333333334" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/bg_list_spn.xml" value="0.2703125" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_favarite.xml" value="0.2703125" />
@@ -87,19 +88,61 @@
         <entry key="app/src/main/res/drawable/bg_play.xml" value="0.204" />
         <entry key="app/src/main/res/drawable/bg_primary_gradient.xml" value="0.235" />
         <entry key="app/src/main/res/drawable/bg_primary_gradient_radius.xml" value="0.2295" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/ic_add_favorite.xml" value="0.2285" />
         <entry key="app/src/main/res/drawable/ic_at.xml" value="0.204" />
-        <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.36041666666666666" />
-        <entry key="app/src/main/res/layout/activity_forgot_password_screen.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/ic_marker.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/ic_marker_active.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/ic_next_track.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/ic_pause.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/ic_play_button.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/ic_radio.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/icon_explore_selector.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/icon_home_selector.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/icon_radio_selector.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/icon_user_selector.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/pause_and_play_music.xml" value="0.233" />
+        <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_forgot_password_screen.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_insert_favorite.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_log_in_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_play_song_screen.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_playlist_screen.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_product_list_screen.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.3619791666666667" />
-        <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_playlist.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.11574074074074074" />
+        <entry key="app/src/main/res/layout/fragment_song_disc.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_song_list.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/header_navigation_bar.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item_banner_slider.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/layout_onboarding.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/loading_layout.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/media_notification_layout.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/play_song_item.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/layout/rcv_album_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_cate_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_category_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_favorite_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_playlist_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_product_item.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/rcv_recommend_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_recommend_item2.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_search_product_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/rcv_theme_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/song_is_playing_view.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/spn_category.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/top_recently_music_item.xml" value="0.375" />
+        <entry key="app/src/main/res/menu/bottom_nav_bar.xml" value="0.33" />
       </map>
     </option>
   </component>

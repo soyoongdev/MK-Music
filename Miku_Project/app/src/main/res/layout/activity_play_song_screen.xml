@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.main_screens.PlaySong_Screen"
-    android:background="@drawable/bg_screen">
+    android:background="@color/mainColor">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_playsong"
@@ -18,7 +18,7 @@
         android:layout_height="350dp"
         android:layout_alignParentBottom="true"
         android:alpha="0.6"
-        android:background="@drawable/bg_product"/>
+        android:background="@color/mainColor"/>
 
 <!--    <de.hdodenhof.circleimageview.CircleImageView-->
 <!--        android:id="@+id/iv_product_image"-->

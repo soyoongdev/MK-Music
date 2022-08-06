@@ -1,6 +1,6 @@
 package com.example.miku_project.screens.activity_screens;
 
-import static com.example.miku_project.Network.BASE_URL;
+import static com.example.miku_project.helper.Config.BASE_URL;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -57,7 +57,7 @@ public class SignUp_screen extends AppCompatActivity {
 
                 dialog.show();
 
-                service.register(new User("", username,"", email, password)).enqueue(registerCallback);
+                //service.register(new User("", username,"", email, password)).enqueue(registerCallback);
 
             }
         });

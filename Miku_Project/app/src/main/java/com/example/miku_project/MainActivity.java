@@ -3,10 +3,10 @@ package com.example.miku_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.example.miku_project.helper.RootData;
 import com.example.miku_project.screens.main_screens.Bottom_nav;
 import com.example.miku_project.screens.activity_screens.LogIn_screen;
 
@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+        System.out.println("Email: " + RootData.getPrefUserData(MainActivity.this).getEmail());
         Intent mainActivity;
-        if (RootData.isUserFileExisted(MainActivity.this)) {
+        if (!RootData.getPrefUserData(MainActivity.this).getEmail().isEmpty()){
             mainActivity = new Intent(getApplicationContext(), Bottom_nav.class);
         } else {
             mainActivity = new Intent(getApplicationContext(), LogIn_screen.class);

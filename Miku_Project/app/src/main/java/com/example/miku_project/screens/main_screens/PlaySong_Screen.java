@@ -23,10 +23,9 @@ import android.widget.Toast;
 
 import com.example.miku_project.R;
 import com.example.miku_project.adapters.ViewPagerPlaylistSong;
-import com.example.miku_project.fragments.SongDiscFragment;
-import com.example.miku_project.fragments.SongPlayListFragment;
+import com.example.miku_project.screens.fragment_screens.SongDiscFragment;
+import com.example.miku_project.screens.fragment_screens.SongPlayListFragment;
 import com.example.miku_project.models.Product;
-import com.example.miku_project.models.Recommend;
 import com.example.miku_project.screens.MediaNotification;
 
 import java.io.IOException;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pink_dark"
+    android:gravity="center_vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar16"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressBackgroundTint="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <LinearLayout
+        android:layout_marginVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/rounded_image_play_music_avatar"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/rock"
+            app:riv_corner_radius="30dp"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_name_song_play_music"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Come back home"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/img_back_song_play_music"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_next_track"
+                android:rotation="180"
+                app:tint="@color/white"
+                android:background="@color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/img_on_pause_play_music"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="20dp"
+                android:src="@drawable/pause_and_play_music"
+                app:tint="@color/white"
+                android:background="@color/transparent" />
+
+            <ImageButton
+                android:id="@+id/img_next_song_play_music"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_next_track"
+                app:tint="@color/white"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

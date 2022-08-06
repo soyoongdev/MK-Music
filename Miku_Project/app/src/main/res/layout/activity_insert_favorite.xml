@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".forms.Insert_Favorite"
-    android:background="@drawable/bg_screen">
+    android:background="@color/mainColor">
 
     <RelativeLayout
         android:id="@+id/rl_title"

@@ -4,9 +4,9 @@ import com.example.miku_project.models.Album;
 import com.example.miku_project.models.Category;
 import com.example.miku_project.models.Favorite;
 import com.example.miku_project.models.FavoriteCategory;
+import com.example.miku_project.models.LoginResult;
 import com.example.miku_project.models.Playlist;
 import com.example.miku_project.models.Product;
-import com.example.miku_project.models.ProductCategory;
 import com.example.miku_project.models.Recommend;
 import com.example.miku_project.models.Response2pikModel;
 import com.example.miku_project.models.ResponseModel;
@@ -15,7 +15,6 @@ import com.example.miku_project.models.ThemeCategory;
 import com.example.miku_project.models.User;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -29,13 +28,13 @@ import retrofit2.http.Part;
 
 public interface IRetrofitService {
 
-    @POST("views/user_login.php")
-    Call<ResponseModel> login(@Body User user);
+    @POST("auth/login")
+    Call<LoginResult> login(@Body User user);
 
-    @POST("views/user_register.php")
+    @POST("auth/signup")
     Call<ResponseModel> register(@Body User user);
 
-    @POST("views/user_forgot_password.php")
+    @POST("auth/password/forget_request")
     Call<ResponseModel> forgot_password(@Body User user);
 
     @POST("views/product_get_all.php")

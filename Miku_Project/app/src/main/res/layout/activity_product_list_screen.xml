@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.ProductList_Screen"
-    android:background="@drawable/bg_screen">
+    android:background="@color/mainColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@drawable/bg_gorillaz" />
+                        android:background="@drawable/ic_favorite" />
 
                     <TextView
                         android:id="@+id/tv_productlist_name"

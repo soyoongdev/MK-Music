@@ -1,26 +1,18 @@
 package com.example.miku_project.models;
 
 public class User {
-    private String id, username, avatar_user, email, password;
+    private String id, type, email, password, role, avatar, avatar_original, phone;
 
     public User() {
     }
 
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     public User(String email) {
         this.email = email;
-    }
-
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public User(String id, String username, String avatar_user, String email, String password) {
-        this.id = id;
-        this.username = username;
-        this.avatar_user = avatar_user;
-        this.email = email;
-        this.password = password;
     }
 
     public String getId() {
@@ -31,20 +23,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getType() {
+        return type;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getAvatar_user() {
-        return avatar_user;
-    }
-
-    public void setAvatar_user(String avatar_user) {
-        this.avatar_user = avatar_user;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getEmail() {
@@ -53,6 +37,38 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getAvatar_original() {
+        return avatar_original;
+    }
+
+    public void setAvatar_original(String avatar_original) {
+        this.avatar_original = avatar_original;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {

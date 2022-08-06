@@ -1,116 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    android:background="@color/mainColor"
+    tools:context=".screens.fragment_screens.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="20dp"
         android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/rl_recommend_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="380dp"
-                    android:layout_height="50dp"
-                    android:layout_centerInParent="true"
-                    android:alpha="0.5"
-                    android:background="@drawable/bg_welcome" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Recommended"
-                    android:textColor="#ffffff"
-                    android:textSize="25sp" />
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_recommend"
+            <LinearLayout
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/rl_recommend_title"
-                android:layout_marginLeft="15dp" />
-
-            <RelativeLayout
-                android:id="@+id/rl_music_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rcv_recommend"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:layout_width="380dp"
-                    android:layout_height="50dp"
-                    android:layout_centerInParent="true"
-                    android:alpha="0.5"
-                    android:background="@drawable/bg_welcome" />
+                android:layout_height="68dp">
 
                 <TextView
+                    android:id="@+id/tvTitleHome"
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Music Style"
-                    android:textColor="#ffffff"
-                    android:textSize="25sp" />
-            </RelativeLayout>
+                    android:text="Rling"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_category"
-                android:layout_width="410dp"
+                <ImageButton
+                    android:id="@+id/imgBtn_searchIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/edit"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rl_music_style" />
-
-            <RelativeLayout
-                android:id="@+id/rl_album"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rcv_category"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:layout_width="380dp"
-                    android:layout_height="50dp"
-                    android:layout_centerInParent="true"
-                    android:alpha="0.5"
-                    android:background="@drawable/bg_welcome" />
+                android:orientation="horizontal">
 
                 <TextView
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Album"
-                    android:textColor="#ffffff"
-                    android:textSize="25sp" />
-            </RelativeLayout>
+                    android:text="New Albums"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_album"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tvViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View all"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerBannerSlider"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rl_album"/>
+                android:orientation="horizontal">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Recently Music"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_list_recently_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/top_recently_music_item"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </ScrollView>
 
 </FrameLayout>

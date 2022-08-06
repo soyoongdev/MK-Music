@@ -13,9 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitBuilder {
-//    private String BASE_URL = "http://10.0.2.2:8081/";
-    private String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
-//    private static final Retrofit retrofit = buildRetrofit();
+    private String BASE_URL = "https://archive-music.host/api/";
 
     private Retrofit buildRetrofit() {
 

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
 import com.example.miku_project.forms.Insert_Favorite;
-import com.example.miku_project.fragments.FavoriteFragment;
-import com.example.miku_project.fragments.HomeFragment;
+import com.example.miku_project.screens.fragment_screens.RadioFragment;
 import com.example.miku_project.models.Favorite;
 import com.example.miku_project.models.ResponseModel;
 import com.example.miku_project.myRetrofit.IRetrofitService;
@@ -85,7 +83,7 @@ public class Adapter_Favorite extends RecyclerView.Adapter<Adapter_Favorite.MyVi
                                 if (Build.VERSION.SDK_INT >= 26) {
                                     ft.setReorderingAllowed(false);
                                 }
-                                ft.replace(R.id.bottom_frame_layout, new FavoriteFragment(), "Favorite").commit();
+                                ft.replace(R.id.bottom_frame_layout, new RadioFragment(), "Favorite").commit();
                                 return true;
                             case R.id.edit:
                                 Intent intent = new Intent(context, Insert_Favorite.class);
@@ -95,7 +93,7 @@ public class Adapter_Favorite extends RecyclerView.Adapter<Adapter_Favorite.MyVi
                                 if (Build.VERSION.SDK_INT >= 26) {
                                     ftt.setReorderingAllowed(false);
                                 }
-                                ftt.replace(R.id.bottom_frame_layout, new FavoriteFragment(), "Favorite").commit();
+                                ftt.replace(R.id.bottom_frame_layout, new RadioFragment(), "Favorite").commit();
                                 return true;
                             default:
                                 return false;

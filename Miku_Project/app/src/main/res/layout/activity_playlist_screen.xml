@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.main_screens.Playlist_Screen"
-    android:background="@drawable/bg_screen">
+    android:background="@color/mainColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                         android:layout_height="150dp"
                         android:layout_marginBottom="10dp"
                         android:scaleType="fitXY"
-                        android:background="@drawable/bg_gorillaz" />
+                        android:background="@drawable/bg_play" />
 
                     <TextView
                         android:id="@+id/tv_playlist_name"

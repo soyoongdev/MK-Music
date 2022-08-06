@@ -1,8 +1,6 @@
 package com.example.miku_project.adapters;
 
 import android.app.Activity;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -24,15 +22,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
 import com.example.miku_project.forms.Insert_Favorite;
-import com.example.miku_project.fragments.FavoriteFragment;
+import com.example.miku_project.screens.fragment_screens.RadioFragment;
 import com.example.miku_project.models.Product;
-import com.example.miku_project.models.Recommend;
 import com.example.miku_project.models.ResponseModel;
 import com.example.miku_project.myRetrofit.IRetrofitService;
 import com.example.miku_project.myRetrofit.RetrofitBuilder;
-import com.example.miku_project.screens.MediaNotification;
 import com.example.miku_project.screens.main_screens.PlaySong_Screen;
-import com.example.miku_project.screens.main_screens.Playlist_Screen;
 
 import java.util.ArrayList;
 
@@ -97,7 +92,7 @@ public class Adapter_Product extends RecyclerView.Adapter<Adapter_Product.MyView
                                 if (Build.VERSION.SDK_INT >= 26) {
                                     ft.setReorderingAllowed(false);
                                 }
-                                ft.replace(R.id.bottom_frame_layout, new FavoriteFragment(), "Favorite").commit();
+                                ft.replace(R.id.bottom_frame_layout, new RadioFragment(), "Favorite").commit();
                                 return true;
                             case R.id.edit:
                                 Intent intent = new Intent(context, Insert_Favorite.class);
@@ -107,7 +102,7 @@ public class Adapter_Product extends RecyclerView.Adapter<Adapter_Product.MyView
                                 if (Build.VERSION.SDK_INT >= 26) {
                                     ftt.setReorderingAllowed(false);
                                 }
-                                ftt.replace(R.id.bottom_frame_layout, new FavoriteFragment(), "Favorite").commit();
+                                ftt.replace(R.id.bottom_frame_layout, new RadioFragment(), "Favorite").commit();
                                 return true;
                             default:
                                 return false;
