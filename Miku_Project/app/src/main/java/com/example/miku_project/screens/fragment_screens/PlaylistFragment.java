@@ -48,11 +48,6 @@ public class PlaylistFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        rcv_playlist = view.findViewById(R.id.rcv_playlist);
-        rcv_playlist.setHasFixedSize(true);
-        rcv_playlist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        service.getAllPlaylist().enqueue(getAllPlaylistCB);
     }
 
     Callback<ArrayList<Playlist>> getAllPlaylistCB = new Callback<ArrayList<Playlist>>() {

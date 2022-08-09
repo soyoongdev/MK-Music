@@ -173,7 +173,7 @@ public class HomeFragment extends Fragment {
         rcv_category.setHasFixedSize(true);
         rcv_category.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
-        service.getAllTheme().enqueue(getAllTheme);
+        //service.getAllTheme().enqueue(getAllTheme);
     }
 
     private void rcvRecommend() {
@@ -225,42 +225,6 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onFailure(Call<ArrayList<Theme>> call, Throwable t) {
-
-        }
-    };
-
-//    Callback<ArrayList<Product>> getAllRecommend = new Callback<ArrayList<Product>>() {
-//        @Override
-//        public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
-//            if (response.isSuccessful()){
-//                product_data = response.body();
-//                adapter_songs = new Adapter_Songs(getActivity(), product_data);
-//                rcv_recommend.setAdapter(adapter_theme);
-//            }else {
-//                Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//
-//        @Override
-//        public void onFailure(Call<ArrayList<Product>> call, Throwable t) {
-//
-//        }
-//    };
-
-    Callback<ArrayList<Recommend>> getAllRecommendCB = new Callback<ArrayList<Recommend>>() {
-        @Override
-        public void onResponse(Call<ArrayList<Recommend>> call, Response<ArrayList<Recommend>> response) {
-            if (response.isSuccessful()){
-                recommend_data = response.body();
-                adapter_recommend = new Adapter_Recommend(getActivity(), recommend_data);
-                rcv_recommend.setAdapter(adapter_recommend);
-            }else {
-                Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        @Override
-        public void onFailure(Call<ArrayList<Recommend>> call, Throwable t) {
 
         }
     };
@@ -349,12 +313,12 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        reloadscreen();
+//        reloadscreen();
     }
 
     private void reloadscreen(){
-        IRetrofitService service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
-        service.getAllRecommends().enqueue(getAllRecommendCB);
+//        IRetrofitService service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
+//        service.getAllRecommends().enqueue(getAllRecommendCB);
 //        service.getAllProduct().enqueue(getAllCB);
 //        service.getAllCategories().enqueue(getAllCategoryCB);
     }

@@ -10,41 +10,18 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="20dp"
         android:fillViewport="true">
 
         <LinearLayout
+            android:paddingTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:paddingHorizontal="20dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
+            <include
+                layout="@layout/title_search_bar_view"
                 android:layout_width="match_parent"
-                android:layout_height="68dp">
-
-                <TextView
-                    android:id="@+id/tvTitleHome"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rling"
-                    android:textSize="48sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white" />
-
-                <ImageButton
-                    android:id="@+id/imgBtn_searchIcon"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/edit"
-                    android:src="@drawable/ic_search"
-                    app:tint="@color/white" />
-
-            </LinearLayout>
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:paddingHorizontal="20dp"
@@ -74,11 +51,12 @@
 
             </LinearLayout>
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPagerBannerSlider"
-                android:layout_marginTop="20dp"
+
+            <include
+                layout="@layout/banner_list_slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:paddingHorizontal="20dp"
@@ -100,7 +78,7 @@
                     android:id="@+id/rcv_list_recently_music"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/top_recently_music_item"/>
+                    tools:listitem="@layout/item_top_music"/>
 
             </LinearLayout>
 

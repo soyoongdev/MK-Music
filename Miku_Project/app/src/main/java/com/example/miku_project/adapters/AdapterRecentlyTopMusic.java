@@ -15,11 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
-import com.example.miku_project.models.Playlist;
 import com.example.miku_project.models.TopMusicRecentlyModel;
 import com.example.miku_project.screens.main_screens.Playlist_Screen;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterRecentlyTopMusic extends RecyclerView.Adapter<AdapterRecentlyTopMusic.AdapterRecentlyTopMusicViewHolder> {
@@ -36,7 +34,7 @@ public class AdapterRecentlyTopMusic extends RecyclerView.Adapter<AdapterRecentl
     @Override
     public AdapterRecentlyTopMusic.AdapterRecentlyTopMusicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.top_recently_music_item, parent, false);
+        View view = inflater.inflate(R.layout.item_top_music, parent, false);
         return new AdapterRecentlyTopMusic.AdapterRecentlyTopMusicViewHolder(view);
     }
 

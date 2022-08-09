@@ -32,8 +32,6 @@ public class ExploreFragment extends Fragment {
 
     private IRetrofitService service;
 
-    private static String BASE_URL = "https://cielmusic1604.000webhostapp.com/";
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,18 +39,13 @@ public class ExploreFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
+//        service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
         return inflater.inflate(R.layout.fragment_playlist, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        rcv_playlist = view.findViewById(R.id.rcv_playlist);
-        rcv_playlist.setHasFixedSize(true);
-        rcv_playlist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        service.getAllPlaylist().enqueue(getAllPlaylistCB);
     }
 
     Callback<ArrayList<Playlist>> getAllPlaylistCB = new Callback<ArrayList<Playlist>>() {
