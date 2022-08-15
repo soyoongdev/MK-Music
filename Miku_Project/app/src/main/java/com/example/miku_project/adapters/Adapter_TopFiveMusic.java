@@ -14,18 +14,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
+import com.example.miku_project.models.MusicModel;
 import com.example.miku_project.models.Playlist;
-import com.example.miku_project.screens.ProductList_Screen;
 import com.example.miku_project.screens.main_screens.Playlist_Screen;
 
 import java.util.ArrayList;
 
-public class Adapter_Playlist extends RecyclerView.Adapter<Adapter_Playlist.MyViewHolder> {
+public class Adapter_TopFiveMusic extends RecyclerView.Adapter<Adapter_TopFiveMusic.MyViewHolder> {
 
     Context context;
-    ArrayList<Playlist> data;
+    ArrayList<MusicModel> data;
 
-    public Adapter_Playlist(Context context, ArrayList<Playlist> data){
+    public Adapter_TopFiveMusic(Context context, ArrayList<MusicModel> data){
         this.context = context;
         this.data = data;
     }
@@ -34,25 +34,15 @@ public class Adapter_Playlist extends RecyclerView.Adapter<Adapter_Playlist.MyVi
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.rcv_playlist_item, parent, false);
+        View view = inflater.inflate(R.layout.item_top_music, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Playlist playlist = data.get(position);
-        holder.tv_playlist_name.setText(playlist.getPlaylist_name());
-
-        Glide.with(context).load(playlist.getPlaylist_image()).into(holder.iv_playlist_img);
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, Playlist_Screen.class);
-                intent.putExtra("playlist", playlist);
-                context.startActivity(intent);
-            }
-        });
+        MusicModel item = data.get(position);
+        holder.tv_playlist_name.setText(item.getNameSong());
+        //Glide.with(context).load(item.getImageUrl()).into(holder.iv_playlist_img);
     }
 
     @Override

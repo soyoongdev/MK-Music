@@ -1,30 +1,37 @@
 package com.example.miku_project.screens.fragment_screens.home.banner;
 
 public class BannerModel {
-    private String urlImage;
-    private int image;
+    private String id;
+    private String imageUrl;
+    private String nameSong;
 
-    public BannerModel(String urlImage) {
-        this.urlImage = urlImage;
+
+    public BannerModel(String id, String imageUrl, String nameSong) {
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.nameSong = nameSong;
     }
 
-    public BannerModel(int image) {
-        this.image = image;
+    public BannerModel() {
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    public String getId() {
+        return id;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public int getImage() {
-        return image;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public String getNameSong() {
+        return nameSong;
+    }
+
+    public void setNameSong(String nameSong) {
+        this.nameSong = nameSong;
     }
 }

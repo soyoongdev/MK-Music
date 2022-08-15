@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        System.out.println("Email: " + RootData.getPrefUserData(MainActivity.this).getEmail());
         Intent mainActivity;
         if (!RootData.getPrefUserData(MainActivity.this).getEmail().isEmpty()){
             mainActivity = new Intent(getApplicationContext(), Bottom_nav.class);

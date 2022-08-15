@@ -58,12 +58,19 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#1D1937">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="307dp"
-                    android:layout_gravity="center_horizontal"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_top_music"
-                    tools:itemCount="5"/>
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_topFiveMusic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_top_music"
+                        tools:itemCount="5"/>
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 

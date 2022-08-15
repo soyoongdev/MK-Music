@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.11927083333333334" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.24320652173913043" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/bg_list_spn.xml" value="0.2703125" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Android Networking/Miku_Project/Miku_Project/app/src/main/res/drawable/bg_favarite.xml" value="0.2703125" />
@@ -108,6 +109,7 @@
         <entry key="app/src/main/res/layout/activity_insert_favorite.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_log_in_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_play_music.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_play_song_screen.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_playlist_screen.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_product_list_screen.xml" value="0.36041666666666666" />
@@ -115,10 +117,13 @@
         <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.2740740740740741" />
         <entry key="app/src/main/res/layout/banner_list_slider.xml" value="0.30782385634886705" />
+        <entry key="app/src/main/res/layout/fragment_current_playing_music.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.36041666666666666" />
-        <entry key="app/src/main/res/layout/fragment_playlist.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_lyric_music.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_other_music.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_playlist.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.11574074074074074" />
@@ -126,6 +131,7 @@
         <entry key="app/src/main/res/layout/fragment_song_list.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/header_navigation_bar.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_banner_slider.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item_top_music.xml" value="0.2064814814814815" />
         <entry key="app/src/main/res/layout/layout_onboarding.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/loading_layout.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/media_notification_layout.xml" value="0.36041666666666666" />

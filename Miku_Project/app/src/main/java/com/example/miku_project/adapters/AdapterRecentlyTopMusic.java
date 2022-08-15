@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.miku_project.R;
-import com.example.miku_project.models.TopMusicRecentlyModel;
+import com.example.miku_project.models.MusicModel;
 import com.example.miku_project.screens.main_screens.Playlist_Screen;
 
 import java.util.List;
@@ -23,9 +23,9 @@ import java.util.List;
 public class AdapterRecentlyTopMusic extends RecyclerView.Adapter<AdapterRecentlyTopMusic.AdapterRecentlyTopMusicViewHolder> {
 
     Context context;
-    List<TopMusicRecentlyModel> data;
+    List<MusicModel> data;
 
-    public AdapterRecentlyTopMusic(Context context, List<TopMusicRecentlyModel> data) {
+    public AdapterRecentlyTopMusic(Context context, List<MusicModel> data) {
         this.context = context;
         this.data = data;
     }
@@ -40,12 +40,12 @@ public class AdapterRecentlyTopMusic extends RecyclerView.Adapter<AdapterRecentl
 
     @Override
     public void onBindViewHolder(@NonNull AdapterRecentlyTopMusicViewHolder holder, int position) {
-        TopMusicRecentlyModel playlist = data.get(position);
-        holder.img_avatar.setImageResource(playlist.getImage());
+        MusicModel playlist = data.get(position);
+//        holder.img_avatar.setImageURI(Uri.parse(playlist.getImageUrl()));
         holder.tv_no.setText(playlist.getNo() + "");
         holder.tv_name_song.setText(playlist.getNameSong());
-        holder.tv_name_singer.setText(playlist.getNameSigner());
-        Glide.with(context).load(playlist.getImage()).into(holder.img_avatar);
+        holder.tv_name_singer.setText(playlist.getNameSinger());
+        Glide.with(context).load(playlist.getImageUrl()).into(holder.img_avatar);
 
         holder.ic_more.setOnClickListener(new View.OnClickListener() {
             @Override

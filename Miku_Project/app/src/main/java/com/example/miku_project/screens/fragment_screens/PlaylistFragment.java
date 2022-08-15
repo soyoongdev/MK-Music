@@ -9,11 +9,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.miku_project.R;
-import com.example.miku_project.adapters.Adapter_Playlist;
+import com.example.miku_project.adapters.Adapter_TopFiveMusic;
 import com.example.miku_project.models.Playlist;
 import com.example.miku_project.myRetrofit.IRetrofitService;
 import com.example.miku_project.myRetrofit.RetrofitBuilder;
@@ -27,7 +26,7 @@ import retrofit2.Response;
 public class PlaylistFragment extends Fragment {
 
     private RecyclerView rcv_playlist;
-    private Adapter_Playlist adapter_playlist;
+    private Adapter_TopFiveMusic adapter_topFiveMusic;
     private ArrayList<Playlist> playlist_data;
 
     private IRetrofitService service;
@@ -55,8 +54,8 @@ public class PlaylistFragment extends Fragment {
         public void onResponse(Call<ArrayList<Playlist>> call, Response<ArrayList<Playlist>> response) {
             if (response.isSuccessful()) {
                 playlist_data = response.body();
-                adapter_playlist = new Adapter_Playlist(getActivity(), playlist_data);
-                rcv_playlist.setAdapter(adapter_playlist);
+                //adapter_topFiveMusic = new Adapter_TopFiveMusic(getActivity(), playlist_data);
+                rcv_playlist.setAdapter(adapter_topFiveMusic);
             } else {
                 Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
             }

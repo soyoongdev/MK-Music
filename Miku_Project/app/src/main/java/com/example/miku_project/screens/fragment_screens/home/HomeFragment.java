@@ -39,12 +39,12 @@ import com.example.miku_project.adapters.Adapter_Songs;
 import com.example.miku_project.adapters.Adapter_Theme;
 import com.example.miku_project.models.Album;
 import com.example.miku_project.models.Category;
+import com.example.miku_project.models.MusicModel;
 import com.example.miku_project.models.Product;
 import com.example.miku_project.models.ProductCategory;
 import com.example.miku_project.models.Recommend;
 import com.example.miku_project.models.Theme;
 import com.example.miku_project.models.ThemeCategory;
-import com.example.miku_project.models.TopMusicRecentlyModel;
 import com.example.miku_project.myRetrofit.IRetrofitService;
 import com.example.miku_project.myRetrofit.RetrofitBuilder;
 import com.example.miku_project.screens.fragment_screens.home.banner.BannerModel;
@@ -60,11 +60,11 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     private ViewPager2 viewPager2;
-    private List<BannerModel> sliderItems;
+    private ArrayList<BannerModel> sliderItems;
     private Handler handler = new Handler();
 
     // Top music recently
-    private List<TopMusicRecentlyModel> topMusicRecentlyModels;
+    private List<MusicModel> topMusicRecentlyModels;
     private AdapterRecentlyTopMusic adapterRecentlyTopMusic;
     private RecyclerView rcvTopMusicRecently;
 
@@ -92,7 +92,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         // Init view
-        initView(view);        //service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
+        initView(view);
+        service = new RetrofitBuilder().createSerVice(IRetrofitService.class, BASE_URL);
 
         return view;
     }
@@ -111,33 +112,46 @@ public class HomeFragment extends Fragment {
 
     private void requestSliderBanner() {
         sliderItems = new ArrayList<>();
-        sliderItems.add(new BannerModel(R.drawable.pop));
-        sliderItems.add(new BannerModel(R.drawable.pop));
-        sliderItems.add(new BannerModel(R.drawable.pop));
 
-        viewPager2.setAdapter(new SliderBannerAdapter(sliderItems, viewPager2));
-
-        viewPager2.setClipToPadding(false);
-        viewPager2.setClipChildren(false);
-        viewPager2.setOffscreenPageLimit(3);
-        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-
-        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
-        compositePageTransformer.addTransformer(new MarginPageTransformer(40));
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+        service.getListBanner().enqueue(new Callback<ArrayList<BannerModel>>() {
             @Override
-            public void transformPage(@NonNull View page, float position) {
-                float r = 1 - Math.abs(position);
-                page.setScaleY(0.85f + r * 0.15f);
+            public void onResponse(Call<ArrayList<BannerModel>> call, Response<ArrayList<BannerModel>> response) {
+                if (response.isSuccessful()){
+                    sliderItems = response.body();
+
+                    viewPager2.setAdapter(new SliderBannerAdapter(sliderItems, viewPager2));
+                    viewPager2.setClipToPadding(false);
+                    viewPager2.setClipChildren(false);
+                    viewPager2.setOffscreenPageLimit(3);
+                    viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+
+                    CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
+                    compositePageTransformer.addTransformer(new MarginPageTransformer(40));
+                    compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+                        @Override
+                        public void transformPage(@NonNull View page, float position) {
+                            float r = 1 - Math.abs(position);
+                            page.setScaleY(0.85f + r * 0.15f);
+                        }
+                    });
+                    viewPager2.setPageTransformer(compositePageTransformer);
+                    viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+                        @Override
+                        public void onPageSelected(int position) {
+                            super.onPageSelected(position);
+                            handler.removeCallbacks(autoSlider);
+                            handler.postDelayed(autoSlider, 3000);
+                        }
+                    });
+
+                }else {
+                    System.out.println("Error >>>" + response.errorBody());
+                }
             }
-        });
-        viewPager2.setPageTransformer(compositePageTransformer);
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+
             @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                handler.removeCallbacks(autoSlider);
-                handler.postDelayed(autoSlider, 3000);
+            public void onFailure(Call<ArrayList<BannerModel>> call, Throwable t) {
+                Log.e(getActivity().getPackageName(), t.getLocalizedMessage());
             }
         });
     }
@@ -151,20 +165,27 @@ public class HomeFragment extends Fragment {
 
     private void loadListTopMusicRecently() {
         topMusicRecentlyModels = new ArrayList<>();
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(0, 1, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(1, 2, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(2, 3, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(3, 4, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(4, 5, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(5, 6, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(6, 7, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(7, 8, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(8, 9, R.drawable.rock, "Nice For What", "Avinci John"));
-        topMusicRecentlyModels.add(new TopMusicRecentlyModel(9, 10, R.drawable.rock, "Nice For What", "Avinci John"));
 
-        adapterRecentlyTopMusic = new AdapterRecentlyTopMusic(getActivity(), topMusicRecentlyModels);
-        rcvTopMusicRecently.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        rcvTopMusicRecently.setAdapter(adapterRecentlyTopMusic);
+        service.getListTopMusicRecent().enqueue(new Callback<ArrayList<MusicModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<MusicModel>> call, Response<ArrayList<MusicModel>> response) {
+                if (response.isSuccessful()){
+                    topMusicRecentlyModels = response.body();
+
+                    adapterRecentlyTopMusic = new AdapterRecentlyTopMusic(getActivity(), topMusicRecentlyModels);
+                    rcvTopMusicRecently.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                    rcvTopMusicRecently.setAdapter(adapterRecentlyTopMusic);
+
+                } else {
+                    Log.e("HomeFragment_loadListMusic: " , response.errorBody().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<MusicModel>> call, Throwable t) {
+                Log.e("HomeFragment_loadListMusic: " , t.getLocalizedMessage());
+            }
+        });
 
     }
 

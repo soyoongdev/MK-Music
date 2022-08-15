@@ -1,5 +1,11 @@
 package com.example.miku_project.screens.fragment_screens.home.banner;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +16,16 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.miku_project.R;
 import com.makeramen.roundedimageview.RoundedImageView;
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
 
 public class SliderBannerAdapter extends RecyclerView.Adapter<SliderBannerAdapter.SliderBannerViewHolder> {
@@ -52,7 +67,22 @@ public class SliderBannerAdapter extends RecyclerView.Adapter<SliderBannerAdapte
         }
 
         void setImage(BannerModel item) {
-            imageView.setImageResource(item.getImage());
+            Log.d("SliderBannerAdapter Log", item.getImageUrl());
+
+            Transformation transformation = new RoundedTransformationBuilder()
+                    .borderColor(Color.BLACK)
+                    .borderWidthDp(2)
+                    .cornerRadiusDp(20)
+                    .oval(false)
+                    .build();
+
+            Picasso.get()
+                    .load(item.getImageUrl())
+                    .fit()
+                    .transform(transformation)
+                    .placeholder(R.drawable.pop)
+                    .error(R.drawable.dance)
+                    .into(imageView);
         }
     }
 

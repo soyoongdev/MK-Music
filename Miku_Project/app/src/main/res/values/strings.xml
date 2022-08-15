@@ -23,4 +23,5 @@
     <string name="explore_title">Explore</string>
     <string name="radio_title">Radio</string>
     <string name="user_title">User</string>
+    <string name="title_activity_play_music">PLayMusicActivity</string>
 </resources>

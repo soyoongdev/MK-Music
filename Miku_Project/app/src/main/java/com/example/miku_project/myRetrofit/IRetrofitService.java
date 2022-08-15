@@ -5,6 +5,7 @@ import com.example.miku_project.models.Category;
 import com.example.miku_project.models.Favorite;
 import com.example.miku_project.models.FavoriteCategory;
 import com.example.miku_project.models.LoginResult;
+import com.example.miku_project.models.MusicModel;
 import com.example.miku_project.models.Playlist;
 import com.example.miku_project.models.Product;
 import com.example.miku_project.models.Recommend;
@@ -13,6 +14,7 @@ import com.example.miku_project.models.ResponseModel;
 import com.example.miku_project.models.Theme;
 import com.example.miku_project.models.ThemeCategory;
 import com.example.miku_project.models.User;
+import com.example.miku_project.screens.fragment_screens.home.banner.BannerModel;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,15 @@ public interface IRetrofitService {
 
     @POST("views/product_get_all.php")
     Call<ArrayList<Product>> getAllProduct();
+
+    @GET("https://62f61000612c13062b4565e8.mockapi.io/api/bannerTopMusic/listBanners")
+    Call<ArrayList<BannerModel>> getListBanner();
+
+    @GET("https://62f61000612c13062b4565e8.mockapi.io/api/bannerTopMusic/listTopMusicRecent")
+    Call<ArrayList<MusicModel>> getListTopMusicRecent();
+
+    @GET("https://62f61000612c13062b4565e8.mockapi.io/api/bannerTopMusic/topFiveMusicAttention")
+    Call<ArrayList<MusicModel>> getTopFiveMusicRecent();
 
     @Multipart
     @POST("/")
